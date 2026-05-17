@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="de">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <title>DockDeck Free - Produktübersicht</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
+        <link href="css/styles.css" rel="stylesheet" />
+    </head>
+    <body class="d-flex flex-column min-vh-100 bg-light">
+
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container px-4 px-lg-5">
+                <a class="navbar-brand" href="index.html">
+                    <img src="assets/logo.png" alt="DockDeck Logo - Home" height="80">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Navigation umschalten">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
+                        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="free.html">Free Tier</a></li>
+                        <li class="nav-item"><a class="nav-link" href="pro.html">Pro Tier</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <main class="flex-shrink-0 py-5">
+            <div class="container px-4 px-lg-5 my-5">
+                <div class="row gx-4 gx-lg-5 align-items-center">
+                    <div class="col-md-6">
+                        <img class="card-img-top mb-5 mb-md-0 shadow-sm rounded" src="https://images.unsplash.com/photo-1629654297299-c8506221ca97?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="DockDeck Free Dashboard Ansicht" />
+                    </div>
+                    <div class="col-md-6">
+                        <div class="small mb-1 text-dark">Lizenztyp: Dauerhaft kostenlos</div>
+                        <h1 class="display-5 fw-bolder">DockDeck Free</h1>
+                        <div class="fs-5 mb-5 text-dark">
+                            <span>0,00 €</span>
+                        </div>
+                        <p class="lead text-dark">Der perfekte Einstieg in die strukturierte Serververwaltung. Ideal, um deinen Basis-Stack (wie etwa Nextcloud, Paperless-ngx und Home Assistant) ohne Terminal-Chaos sauber zu organisieren.</p>
+                        <ul class="mb-4 text-dark">
+                            <li>Verwaltung von bis zu 3 Docker-Containern gleichzeitig</li>
+                            <li>Basis-Monitoring deiner ZFS-Pools (Speicherplatz und Health-Status)</li>
+                            <li>Zugriff auf die Community-Foren</li>
+                        </ul>
+                        <div class="d-flex">
+                            <button class="btn btn-outline-dark flex-shrink-0" type="button">
+                                <i class="bi-download me-1" aria-hidden="true"></i>
+                                Kostenlos herunterladen
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer class="py-5 bg-dark mt-auto">
+            <div class="container">
+                <p class="m-0 text-center text-white mb-3">Copyright &copy; DockDeck GmbH 2026</p>
+                <div class="d-flex justify-content-center flex-wrap">
+                    <a href="impressum.html" class="text-light text-decoration-none mx-3 my-1">Impressum</a>
+                    <a href="datenschutz.html" class="text-light text-decoration-none mx-3 my-1">Datenschutz</a>
+                    <a href="license.html" class="text-light text-decoration-none mx-3 my-1">Lizenz</a>
+                    <a href="accessibility.html" class="text-light text-decoration-none mx-3 my-1">Barrierefreiheit</a>
+                    <a href="about.html" class="text-light text-decoration-none mx-3 my-1">Über Uns</a>
+                    <a href="contact.html" class="text-light text-decoration-none mx-3 my-1">Kontakt</a>
+                    <a href="#" id="openCookieSettings" class="text-light text-decoration-none mx-3 my-1">Cookie-Einstellungen</a>
+                </div>
+            </div>
+        </footer>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="js/scripts.js"></script>
+
+        <aside id="cookieBanner" class="position-fixed bottom-0 start-0 w-100 bg-white border-top shadow-lg z-3" aria-label="Cookie Einstellungen" style="display: none;">
+            <div class="container py-4">
+                <div class="row align-items-center">
+                    <div class="col-lg-8 mb-3 mb-lg-0">
+                        <h2 id="cookieBannerTitle" class="h5 fw-bolder mb-2 text-dark">Ihre Privatsphäre ist uns wichtig</h2>
+                        <p id="cookieBannerDesc" class="mb-0 text-dark">
+                            Wir verwenden Cookies, um die grundlegenden Funktionen unserer Website zu ermöglichen. Nach Ihrer Zustimmung verwenden wir zusätzlich Analyse-Tools, um DockDeck weiter zu verbessern. Weitere Informationen finden Sie <a href="datenschutz.html" class="text-decoration-underline text-primary">hier</a>.
+                        </p>
+                    </div>
+                    <div class="col-lg-4 d-flex flex-column flex-sm-row gap-2 justify-content-lg-end">
+                        <button type="button" class="btn btn-outline-dark fw-bold" id="btnDeclineCookies">
+                            Nur essenzielle
+                        </button>
+                        <button type="button" class="btn btn-primary fw-bold" id="btnAcceptCookies">
+                            Alle akzeptieren
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+        <script>
+            document.addEventListener("DOMContentLoaded", function() {
+                const cookieBanner = document.getElementById("cookieBanner");
+                const btnAccept = document.getElementById("btnAcceptCookies");
+                const btnDecline = document.getElementById("btnDeclineCookies");
+                const btnOpenSettings = document.getElementById("openCookieSettings");
+
+                if (!localStorage.getItem("cookieConsent")) {
+                    setTimeout(() => {
+                        cookieBanner.style.display = "block";
+                    }, 500);
+                }
+
+                function setConsent(value) {
+                    localStorage.setItem("cookieConsent", value);
+                    cookieBanner.style.display = "none";
+                }
+
+                btnAccept.addEventListener("click", function() {
+                    setConsent("all");
+                });
+
+                btnDecline.addEventListener("click", function() {
+                    setConsent("essential");
+                });
+
+                if (btnOpenSettings) {
+                    btnOpenSettings.addEventListener("click", function(event) {
+                        event.preventDefault();
+                        cookieBanner.style.display = "block";
+                    });
+                }
+            });
+        </script>
+    </body>
+</html>
